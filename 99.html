@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            padding: 1px;
+            background-color: #f0f0f0;
+        }
+
+        button {
+            display: block;
+            width: 100px;
+            height: 20px;
+            margin: 20px auto;
+        }
+
+        .box {
+            position: absolute;
+            transform-style: preserve-3d;
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+            position: relative;
+            transition: all 1.5s linear;
+        }
+
+        .big {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            background: #fff;
+            border-radius: 10px;
+            width: 80px;
+            height: 80px;
+        }
+
+        .big1 {
+            transform: rotateX(270deg) translateZ(-40px);
+            background-color: #ffffce;
+        }
+
+        .big2 {
+            transform: rotateX(-90deg) translateZ(40px);
+            background-color: rgb(216, 253, 216);
+        }
+
+        .big3 {
+            transform: rotateY(90deg) translateZ(-40px);
+            background-color: rgb(255, 224, 224);
+        }
+
+        .big4 {
+            transform: rotateY(90deg) translateZ(40px);
+            background-color: rgb(253, 224, 229);
+        }
+
+        .big5 {
+            transform: translateZ(-40px);
+            background-color: rgb(224, 224, 255);
+        }
+
+        .big6 {
+            transform: translateZ(40px);
+            background-color: rgb(255, 231, 207);
+        }
+
+        .small {
+            background-color: red;
+            border-radius: 50%;
+            position: absolute;
+        }
+
+        /* 1 */
+        .big1 .small {
+            width: 20px;
+            height: 20px;
+            top: 50%;
+            left: 50%;
+            margin-top: -10px;
+            margin-left: -10px;
+        }
+
+        /* 2 */
+        .big2 .small {
+            width: 15px;
+            height: 15px;
+        }
+
+        .big2 .small:nth-child(1) {
+            left: 20%;
+            top: 20%;
+        }
+
+        .big2 .small:nth-child(2) {
+            left: 60%;
+            top: 60%;
+        }
+
+        /* 3 */
+        .big3 .small {
+            width: 13px;
+            height: 13px;
+        }
+
+        .big3 .small:nth-child(1) {
+            left: 18%;
+            top: 18%;
+        }
+
+        .big3 .small:nth-child(2) {
+            left: 42%;
+            top: 42%;
+        }
+
+        .big3 .small:nth-child(3) {
+            left: 66%;
+            top: 66%;
+        }
+
+        /* 4 */
+        .big4 .small {
+            width: 11px;
+            height: 11px;
+        }
+
+        .big4 .small:nth-child(1) {
+            left: 20%;
+            top: 20%;
+        }
+
+        .big4 .small:nth-child(2) {
+            left: 60%;
+            top: 20%;
+        }
+
+        .big4 .small:nth-child(3) {
+            left: 60%;
+            top: 60%;
+        }
+
+        .big4 .small:nth-child(4) {
+            left: 20%;
+            top: 60%;
+        }
+        /* 5 */
+        /* 4 */
+        .big5 .small {
+            width: 11px;
+            height: 11px;
+        }
+
+        .big5 .small:nth-child(1) {
+            left: 20%;
+            top: 20%;
+        }
+
+        .big5 .small:nth-child(2) {
+            left: 60%;
+            top: 20%;
+        }
+
+        .big5 .small:nth-child(3) {
+            left: 60%;
+            top: 60%;
+        }
+
+        .big5 .small:nth-child(4) {
+            left: 20%;
+            top: 60%;
+        }
+        .big5 .small:nth-child(5) {
+            top: 42%;
+            left: 42%;
+        }
+        /* 6 */
+        .big6 .small {
+            width: 10px;
+            height: 10px;
+        }
+
+        .big6 .small:nth-child(1) {
+            top: 20%;
+            left: 22%;
+        }
+
+        .big6 .small:nth-child(2) {
+            top: 48%;
+            left: 22%;
+        }
+
+        .big6 .small:nth-child(3) {
+            top: 75%;
+            left: 22%;
+        }
+
+        .big6 .small:nth-child(4) {
+            top: 20%;
+            left: 60%;
+        }
+
+        .big6 .small:nth-child(5) {
+            top: 48%;
+            left: 60%;
+        }
+
+        .big6 .small:nth-child(6) {
+            top: 75%;
+            left: 60%;
+        }
+    </style>
+</head>
+
+<body>
+    <button>点击开始</button>
+    <div class="box">
+        <div class="big big1">
+            <div class="small"></div>
+        </div>
+        <div class="big big2">
+            <div class="small"></div>
+            <div class="small"></div>
+        </div>
+        <div class="big big3">
+            <div class="small"></div>
+            <div class="small"></div>
+            <div class="small"></div>
+        </div>
+        <div class="big big4">
+            <div class="small"></div>
+            <div class="small"></div>
+            <div class="small"></div>
+            <div class="small"></div>
+        </div>
+        <div class="big big5">
+            <div class="small"></div>
+            <div class="small"></div>
+            <div class="small"></div>
+            <div class="small"></div>
+            <div class="small"></div>
+        </div>
+        <div class="big big6">
+            <div class="small"></div>
+            <div class="small"></div>
+            <div class="small"></div>
+            <div class="small"></div>
+            <div class="small"></div>
+            <div class="small"></div>
+        </div>
+    </div>
+    <script>
+        var btn = document.querySelector('button')
+        var box = document.querySelector('.box');
+        btn.onclick = function () {
+            var num1 = parseInt(Math.random() * 10);
+            var num2 = parseInt(Math.random() * 10);
+            var num3 = parseInt(Math.random() * 10);
+            num1 = num1*90 ;
+            num2 = num2*90 ;
+            num3 = num3*90 ;
+            btn.disabled = true;
+            box.style.transform = 'rotateX(' + num1 + 'deg) rotateY(' + num2 + 'deg) rotateZ(' + num3 + 'deg)';
+        }
+        box.addEventListener('transitionend', function () {
+            btn.disabled = false;
+        })
+    </script>
+</body>
+
+</html>
