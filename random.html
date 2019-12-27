@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        button {
+            display: block;
+            width: 100px;
+            height: 20px;
+            margin: 0 auto;
+        }
+
+        div {
+            width: 100px;
+            height: 50px;
+            margin: 50px auto;
+            line-height: 50px;
+            font-size: 30px;
+            text-align: center;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <button>点击开始</button>
+    <div></div>
+    <script>
+        var btn = document.querySelector('button');
+        var div = document.querySelector('div');
+        btn.onclick = function () {
+            btn.disabled = true;
+            var tim = 50;
+            var timer = setInterval(function () {
+                div.style.color = 'rgb(' + parseInt(Math.random() * 256) + ',' + parseInt(Math.random() * 256) + ',' + parseInt(Math.random() * 256) + ')'
+                div.innerHTML = parseInt(Math.random() * 10)+'&nbsp; '+parseInt(Math.random() * 10)+'&nbsp; '+parseInt(Math.random() * 10);
+                tim--
+                if (tim <= 0) {
+                    clearInterval(timer);
+                    btn.disabled = false;
+                }
+            }, 200)
+        }
+    </script>
+</body>
+
+</html>
